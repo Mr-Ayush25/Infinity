@@ -20,7 +20,7 @@ const DashboardNav = () => {
             <p className="h-8 w-8 bg-black-100 rounded-full overflow-hidden"></p>
           }
         >
-          <div className="relative">{data && <UserButton />}</div>
+          <div className="relative">{<UserButton />}</div>
         </Suspense>
       </div>
     </nav>
