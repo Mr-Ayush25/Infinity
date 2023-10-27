@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import DashboardContent from "@/components/editor/DashboardContent";
 import { Suspense } from "react";
