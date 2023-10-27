@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import UserButton from "./UserButton";
+import { Suspense } from "react";
 
 const DashboardNav = () => {
   const { data } = useSession();
@@ -14,8 +15,13 @@ const DashboardNav = () => {
             Infinity
           </div>
         </Link>
-
-        <div className="relative">{data && <UserButton />}</div>
+        <Suspense
+          fallback={
+            <p className="h-8 w-8 bg-black-100 rounded-full overflow-hidden"></p>
+          }
+        >
+          <div className="relative">{data && <UserButton />}</div>
+        </Suspense>
       </div>
     </nav>
   );
