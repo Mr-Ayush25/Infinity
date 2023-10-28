@@ -1,14 +1,17 @@
 "use client";
+
 import Placeholder from "@tiptap/extension-placeholder";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import TipTapMenu from "./TipTapMenu";
+
 import { useCompletion } from "ai/react";
 import { useEffect, useRef, useState } from "react";
 import { Bot, Loader2, SaveIcon } from "lucide-react";
 import { useSession } from "next-auth/react";
-import axios from "axios";
+
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const TipTapEditor = ({
   title,
@@ -19,11 +22,13 @@ const TipTapEditor = ({
   setProgress,
   content,
   blogId,
+  setSelectedImage,
 }) => {
   const { data } = useSession();
   const email = data?.user?.email;
   const authorImg = data?.user?.image;
   const authorName = data?.user?.name;
+
   const [editorState, setEditorState] = useState(content ?? "");
   const [isSaving, setIsSaving] = useState(false);
   // Configure Editor
@@ -55,7 +60,7 @@ const TipTapEditor = ({
   // 1.To hold the last completeion value.
   const lastCompletion = useRef("");
 
-  // 2. Using useeffect to compare from last value to current value of completion. Saving the value to editor
+  // 2. Using useEffect to compare from last value to current value of completion. Saving the value to editor
   useEffect(() => {
     if (!completion || !editor) return;
     const diff = completion.slice(lastCompletion.current.length);
@@ -90,6 +95,7 @@ const TipTapEditor = ({
       setTitle("");
       setFile("");
       setProgress(0);
+      setSelectedImage(null);
       editor?.commands.clearContent(true);
     } else {
       toast.error(response.data.message);
