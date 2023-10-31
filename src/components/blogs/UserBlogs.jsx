@@ -43,7 +43,7 @@ const UserBlog = () => {
         <div className="w-full absolute left-0 flex flex-col p-2  justify-center items-center font-[futura] text-4xl text-gray-500">
           <div className="relative">
             <Image
-              src="/assets/empty.webp"
+              src="/assets/empty.jpg"
               alt="No Post"
               width={500}
               height={500}
