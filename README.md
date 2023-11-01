@@ -1,7 +1,5 @@
 # Infinity Blog Application
 
-![Tech Blog](https://infinity-mr-ayush25.vercel.app)
-
 ## Table of Contents
 
 - [Introduction](#introduction)
