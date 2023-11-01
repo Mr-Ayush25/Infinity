@@ -134,10 +134,10 @@ const HomePage = () => {
               <div>
                 <h4 className="text-gray-400 font-semibold mb-5">SOCIALS</h4>
                 <div className="flex gap-7 text-3xl ">
-                  <Link href="https://www.github.com">
+                  <Link href="https://github.com/Mr-Ayush25/Infinity">
                     <BsGithub className="hover:scale-110 hover:shadow-md rounded-full hover:shadow-white-100" />
                   </Link>
-                  <Link href="https://www.linkedin.com">
+                  <Link href="https://www.linkedin.com/in/ayush-tiwari-n2511">
                     <BsLinkedin className="hover:scale-110 hover:shadow-md hover:shadow-white-100" />
                   </Link>
                 </div>
