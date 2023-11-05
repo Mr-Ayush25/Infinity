@@ -81,7 +81,7 @@ const HomePage = () => {
         </div>
 
         {/* Get started */}
-        <div className="w-full h-[60vh] md:h-screen md:pl-16 xl:pl-32 py-14 font-serif flex max-md:flex-col justify-center items-center">
+        <div className="w-full h-[70vh] md:h-screen md:pl-16 xl:pl-32 py-14 font-serif flex max-md:flex-col justify-center items-center">
           <div className="w-full md:w-1/3 flex flex-col justify-center max-md:items-center gap-4 md:gap-14 max-md:max-w-xs">
             <h2 className="text-3xl md:text-6xl font-bold max-md:text-center tracking-wide">
               Get started with Infinity today.
