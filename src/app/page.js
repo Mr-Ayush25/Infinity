@@ -14,7 +14,7 @@ const HomePage = () => {
       <HomeNavbar />
       <section className="flex flex-col gap-3 max-md:pb-10">
         {/* Hero title */}
-        <div className="max-md:h-[40vh] h-[70vh] max-w-10xl mx-auto flex flex-col justify-center items-center text-5xl md:text-7xl text-center gap-4">
+        <div className="max-md:h-[55vh] h-[70vh] max-w-10xl mx-auto flex flex-col justify-center items-center text-5xl md:text-7xl text-center gap-4">
           <p className="font-semibold text-3xl font-sans">Infinity Blog</p>
           <Image
             src="/assets/herocanva.svg"
@@ -37,9 +37,9 @@ const HomePage = () => {
 
         <HeroCarousel />
 
-        <div className="bg-[#f4e2d8] w-full h-screen px-3 py-10 font-sans">
+        <div className="bg-[#f4e2d8] w-full md:h-screen px-3 py-10 font-sans">
           <div className="max-w-5xl h-full flex flex-col items-center justify-center gap-16 md:gap-32 mx-auto">
-            <div className="text-5xl md:text-6xl text-center flex flex-col gap-8">
+            <div className="text-4xl md:text-6xl text-center flex flex-col gap-8">
               <h2 className="font-serif font-semibold">
                 We didn&apos;t reinvented the <br /> wheel, just simplified.
               </h2>
@@ -134,10 +134,16 @@ const HomePage = () => {
               <div>
                 <h4 className="text-gray-400 font-semibold mb-5">SOCIALS</h4>
                 <div className="flex gap-7 text-3xl ">
-                  <Link href="https://github.com/Mr-Ayush25/Infinity">
+                  <Link
+                    href="https://github.com/Mr-Ayush25/Infinity"
+                    target="blank"
+                  >
                     <BsGithub className="hover:scale-110 hover:shadow-md rounded-full hover:shadow-white-100" />
                   </Link>
-                  <Link href="https://www.linkedin.com/in/ayush-tiwari-n2511">
+                  <Link
+                    href="https://www.linkedin.com/in/ayush-tiwari-n2511"
+                    target="blank"
+                  >
                     <BsLinkedin className="hover:scale-110 hover:shadow-md hover:shadow-white-100" />
                   </Link>
                 </div>

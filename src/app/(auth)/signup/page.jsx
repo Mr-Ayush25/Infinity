@@ -78,7 +78,7 @@ const Signup = () => {
           <button
             disabled={data || isLoading}
             type="submit"
-            className="text-md md:text-lg font-semibold rounded-md cursor-pointer bg-primary px-6 md:px-8 py-[10px] flex items-center justify-center gap-4 text-lg text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
+            className="text-md md:text-lg font-semibold rounded-md cursor-pointer bg-primary px-6 md:px-8 py-[10px] flex items-center justify-center gap-4  text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
           >
             Sign Up{" "}
             {isLoading && (
@@ -92,7 +92,7 @@ const Signup = () => {
           <button
             disabled={data}
             onClick={() => signIn("google", { callbackUrl: "/write" })}
-            className="text-md cursor-pointer md:text-lg font-semibold rounded-md  bg-primary px-6 md:px-8 py-[10px] flex items-center justify-center gap-4 text-lg text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
+            className="text-md cursor-pointer md:text-lg font-semibold rounded-md  bg-primary px-6 md:px-8 py-[10px] flex items-center justify-center gap-4  text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
           >
             <ImGoogle />
             Sign up with Google
@@ -100,7 +100,7 @@ const Signup = () => {
           <button
             disabled={data}
             onClick={() => signIn("github", { callbackUrl: "/write" })}
-            className="text-md cursor-pointer md:text-lg font-semibold rounded-md  bg-primary px-6 md:px-8 py-[10px]  flex items-center justify-center gap-4 text-lg text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
+            className="text-md cursor-pointer md:text-lg font-semibold rounded-md  bg-primary px-6 md:px-8 py-[10px]  flex items-center justify-center gap-4  text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
           >
             <BsGithub />
             Sign up with Github

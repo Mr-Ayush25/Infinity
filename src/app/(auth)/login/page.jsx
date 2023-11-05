@@ -31,7 +31,6 @@ const Login = () => {
         callbackUrl,
       });
 
-      
       if (isLoggedIn.ok) {
         setIsLoading(false);
         router.refresh();
@@ -59,7 +58,10 @@ const Login = () => {
             {error}
           </h2>
         )}
-        <form onSubmit={loginUsingCredential} className="flex flex-col gap-5">
+        <form
+          onSubmit={loginUsingCredential}
+          className="flex flex-col gap-2 md:gap-5"
+        >
           <Input
             type="email"
             label="Enter your email"
@@ -76,7 +78,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={data || isLoading}
-            className="text-md md:text-lg font-semibold rounded-md  bg-primary px-6 md:px-8 py-[10px] flex items-center justify-center gap-4 text-lg text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
+            className="text-md md:text-lg font-semibold rounded-md  bg-primary px-6 md:px-8 py-[8px] sm:py-[10px] flex items-center justify-center gap-4  text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
           >
             Log In {isLoading && <ImSpinner className="animate-spin" />}
           </button>
@@ -89,7 +91,7 @@ const Login = () => {
             onClick={() =>
               signIn("google", { callbackUrl: callbackUrl, redirect: true })
             }
-            className="text-md cursor-pointer md:text-lg font-semibold rounded-md  bg-primary px-6 md:px-8 py-[10px] flex items-center justify-center gap-4 text-lg text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
+            className="text-md cursor-pointer md:text-lg font-semibold rounded-md  bg-primary px-6 md:px-8 py-[8px] sm:py-[10px] flex items-center justify-center gap-4  text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
           >
             <ImGoogle />
             Sign in with Google
@@ -99,7 +101,7 @@ const Login = () => {
             onClick={() =>
               signIn("github", { callbackUrl: callbackUrl, redirect: true })
             }
-            className="text-md cursor-pointer md:text-lg font-semibold rounded-md  bg-primary px-6 md:px-8 py-[10px]  flex items-center justify-center gap-4 text-lg text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
+            className="text-md cursor-pointer md:text-lg font-semibold rounded-md  bg-primary px-6 md:px-8 py-[8px] sm:py-[10px] flex items-center justify-center gap-4  text-white w-full hover:bg-secondary transition duration-200 ease-in-out"
           >
             <BsGithub />
             Sign in with Github

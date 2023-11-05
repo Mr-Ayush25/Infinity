@@ -13,7 +13,7 @@ const HomeNavbar = () => {
         <div className="text-3xl md:text-4xl font-[futura] tracking-wide cursor-pointer">
           Infinity
         </div>
-        <div className="hidden lg:data-between lg:gap-14">
+        <div className="hidden xl:data-between xl:gap-14">
           {navbarLinks.map((nav) => (
             <Link key={nav.label} href={nav.route}>
               <h3 className="text-xl font-mono hover:text-primary transition-all duration-150 ease-in-out">

@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
           <DashboardNav />
         </Suspense>
       </div>
-      <div className="pt-10">{children}</div>
+      <div className="py-10">{children}</div>
     </main>
   );
 };

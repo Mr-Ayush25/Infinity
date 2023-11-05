@@ -25,6 +25,7 @@ const TipTapEditor = ({
   setSelectedImage,
 }) => {
   const { data } = useSession();
+
   const email = data?.user?.email;
   const authorImg = data?.user?.image;
   const authorName = data?.user?.name;
@@ -69,6 +70,7 @@ const TipTapEditor = ({
   }, [completion]);
 
   const handleCompletion = () => {
+    if (!editor) return;
     const prompt = editor.getText().split(" ").slice(-20).join(" ");
     if (prompt.length >= 1) {
       complete(prompt);
@@ -93,7 +95,7 @@ const TipTapEditor = ({
       setEditorState("");
       setImageUrl("");
       setTitle("");
-      setFile("");
+      setFile(null);
       setProgress(0);
       setSelectedImage(null);
       editor?.commands.clearContent(true);
